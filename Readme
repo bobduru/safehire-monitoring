@@ -1,0 +1,4 @@
+apt-get update
+apt install docker.io
+docker build -t safehire-monitoring .
+docker run -d -p 8000:8000 safehire-monitoring
