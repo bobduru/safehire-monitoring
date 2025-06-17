@@ -32,6 +32,8 @@ async def get_prompt(add_keywords_context: bool = True):
         return {"prompt": prompt, "labels": labels}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error generating prompt: {str(e)}")
+    
+    
 
 @app.get("/errors")
 async def get_errors():
